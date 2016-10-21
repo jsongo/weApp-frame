@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/pic/pic",
-    "pages/explore/explore",
+    "pages/waimai/waimai",
     "pages/my/my"
   ],
   "window":{
@@ -20,7 +20,7 @@
         "text": "首页",
         "selectedIconPath": "res/img/tab/home-on.png"
       }, {
-        "pagePath": "pages/explore/explore",
+        "pagePath": "pages/waimai/waimai",
         "iconPath": "res/img/tab/wm-off.png",
         "text": "外卖",
         "selectedIconPath": "res/img/tab/wm-on.png"

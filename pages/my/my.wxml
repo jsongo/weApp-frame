@@ -55,5 +55,17 @@
             <text class="sub-title">关于</text>
             <image src="../../res/img/my/arrow.png" class="arrow"></image>
         </view>
+        <view class="item 退出" bindtap="logout">
+            <image src="../../res/img/my/exit.png" class="icon"></image>
+            <text class="sub-title">退出</text>
+            <image src="../../res/img/my/arrow.png" class="arrow"></image>
+        </view>
     </view>
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+        <action-sheet-item class="item" bindtap="doLogout" data-name="确定注销">确定注销</action-sheet-item>
+        <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+    </action-sheet>
+    <toast hidden="{{toastHidden}}" duration="3000" bindchange="toastChange">
+    {{toastMsg}}
+    </toast>
 </view>
