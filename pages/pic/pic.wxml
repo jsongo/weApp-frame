@@ -1,0 +1,16 @@
+<!--pic.wxml-->
+<view class="container" style="height: {{winH}}px;">
+    <view class="view-bg"></view>
+    <swiper class="playing" current="{{curIndex}}"
+        style="height: {{winH}}px;" indicator-dots="{{false}}">
+        <block wx:for="{{items}}">
+            <swiper-item>
+                <view class="inner-wrapper">
+                    <image src="{{item.img}}" class="slide-image"
+                    mode="aspectFill"></image>
+                    <text class="desc">{{item.desc}}</text>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

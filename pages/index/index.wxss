@@ -1,0 +1,46 @@
+/**index.wxss**/
+@import "../../wxss/base";
+
+page {
+    background-color: cornsilk;
+}
+.scroll-wrapper {
+    height: 100%;
+    box-sizing: border-box;
+}
+.scroll-wrapper .scroll-view-item {
+    float: left;
+    margin: 5px 1%;
+    box-sizing: border-box;
+    width: 360rpx;
+    height: 360rpx;
+    position: relative;
+}
+.scroll-wrapper .scroll-view-item image {
+    width: 100%;
+    height: 100%;
+}
+.scroll-wrapper .scroll-view-item .desc-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70rpx;
+    background: rgba(48, 48, 48, 0.7);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 5px;
+    padding-top: 26rpx;
+}
+.scroll-wrapper .scroll-view-item .desc-wrap .desc {
+    font-size: 24rpx;
+    color: #eee;
+    line-height: 1.35em;
+    height: 72rpx;
+}
+.navigator-hover {
+    border: 1px #f00 solid; 
+}

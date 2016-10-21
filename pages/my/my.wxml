@@ -1,0 +1,59 @@
+<view class="container">
+    <view class="top">
+        <image src="../../res/img/my/my-bg.jpg" class="bg"></image>
+        <view class="user">
+            <image src="../../res/img/my/avatar.jpg" class="avatar"></image>
+            <text class="name">凌云壮志</text>
+        </view>
+        <view class="info">
+            <view class="item line-right">
+                <view class="desc"><text class="red">11072</text></view>
+                <text class="tips">我的积分</text>
+            </view>
+            <view class="item line-right">
+                <view class="desc"><text class="red">2</text>张</view>
+                <text class="tips">代金券</text>
+            </view>
+            <view class="item">
+                <view class="desc"><text class="red">2</text>未读</view>
+                <text class="tips">我的消息</text>
+            </view>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="item account">
+            <image src="../../res/img/my/card.png" class="icon"></image>
+            <text class="sub-title">账户与安全</text>
+            <image src="../../res/img/my/arrow.png" class="arrow"></image>
+        </view>
+        <view class="item wallet">
+            <image src="../../res/img/my/wallet.png" class="icon"></image>
+            <text class="sub-title">我的钱包</text>
+            <image src="../../res/img/my/arrow.png" class="arrow"></image>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="item fav">
+            <image src="../../res/img/my/fav.png" class="icon"></image>
+            <text class="sub-title">我的关注</text>
+            <image src="../../res/img/my/arrow.png" class="arrow"></image>
+        </view>
+        <view class="item comment">
+            <image src="../../res/img/my/comment.png" class="icon"></image>
+            <text class="sub-title">评价/晒单</text>
+            <image src="../../res/img/my/arrow.png" class="arrow"></image>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="item feedback">
+            <image src="../../res/img/my/feedback.png" class="icon"></image>
+            <text class="sub-title">意见反馈</text>
+            <image src="../../res/img/my/arrow.png" class="arrow"></image>
+        </view>
+        <view class="item about">
+            <image src="../../res/img/my/about.png" class="icon"></image>
+            <text class="sub-title">关于</text>
+            <image src="../../res/img/my/arrow.png" class="arrow"></image>
+        </view>
+    </view>
+</view>

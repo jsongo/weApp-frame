@@ -1,0 +1,93 @@
+@import "../../wxss/base";
+
+page {
+    background: #eee;
+}
+.top {
+    height: 380rpx;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.top .bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+}
+/* user */
+.top .user {
+    width: 100%;
+    margin: 50rpx auto 0;
+    text-align: center;
+}
+.top .user .avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 120px;
+    display: block;
+    margin: auto;
+}
+.top .user .name {
+    font-size: 30rpx;
+    color: #555;
+    margin: 30rpx;
+    font-weight: bold;
+}
+/* info */
+.top .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80rpx;
+    background: rgba(48, 48, 48, 0.7);
+    display: flex;
+    padding: 10px;
+}
+.top .info .item {
+    flex: 1;
+    color: #fff;
+    font-size: 28rpx;
+    line-height: 1.5em;
+    text-align: center;
+}   
+.top .info .red {
+    color: orangered;
+    margin: 0 3px;
+    font-size: 32rpx;
+}
+.top .line-right {
+    border-right: 1px #888 solid;
+}
+/* menu */
+.menu {
+    margin-top: 30rpx;
+    width: 100%;
+}
+.menu .item {
+    border-bottom: 1px #eee solid;
+    background: #fff;
+    padding: 16rpx;
+
+}
+.menu .item .icon {
+    width: 56rpx;
+    height: 56rpx;
+    vertical-align: middle;
+    margin: 0 20rpx;
+}
+.menu .item .sub-title {
+    font-size: 32rpx;
+    line-height: 1.75em;
+    color: #333;
+}
+.menu .item .arrow {
+    height: 30rpx;
+    width: 18rpx;
+    float: right;
+    margin: 16rpx 24rpx;
+}

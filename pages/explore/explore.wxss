@@ -1,0 +1,93 @@
+@import "../../wxss/base";
+
+page {
+    background-color: #fff;
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.main-section {
+    display: flex;
+}
+.banner {
+    height: 150px;
+}
+.banner image {
+    width: 100%;
+    height: 150px;
+}
+.sep-section {
+    height: 34px;
+    background-color: #ccc;
+    display: flex;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    line-height: 24px;
+}
+.sep-section .left-sec {
+    flex: 1;
+    border-right: 1px #333 solid;
+}
+.sep-section .right-sec {
+    flex: 5;
+}
+.left-menu {
+    flex: 1;
+    text-align: center;
+    background-color: #ccc;
+} 
+.left-menu .item.selected {
+    background-color: #f3f3f3;
+} 
+.left-menu .list {
+    width: 100%;
+}
+.left-menu .item {
+    flex: 1;
+    font-size: 14px;
+    padding: 10px 5px;
+    line-height: 18px;
+    border-bottom: 1px #f3f3f3 solid;
+} 
+.right-main {
+    flex: 5;
+}
+.right-main .item {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px #f3f3f3 solid;
+}
+.right-main .item .dish-img {
+    flex: 1;
+    width: 120rpx;
+    height: 120rpx;
+}
+.right-main .item .info {
+    flex: 3;
+    padding: 0 10px;
+}
+.right-main .item text {
+    display: block;
+    line-height: 1.5em;
+}
+.right-main .item .desc {
+    font-size: 14px;
+}
+.right-main .item .tips {
+    font-size: 12px;
+    color: #ccc;
+}
+.right-main .item .price {
+    font-size: 14px;
+    color: #ff0000;
+}
+.add-to-cart {
+    width: 60rpx;
+    height: 60rpx;
+}

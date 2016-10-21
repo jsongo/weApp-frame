@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/pic/pic",
+    "pages/explore/explore",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#373b3e",
+    "navigationBarTitleText": "花瓣列表",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#eee"
+  },
+  "tabBar": {
+      "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath": "res/img/tab/home-off.png",
+        "text": "首页",
+        "selectedIconPath": "res/img/tab/home-on.png"
+      }, {
+        "pagePath": "pages/explore/explore",
+        "iconPath": "res/img/tab/wm-off.png",
+        "text": "外卖",
+        "selectedIconPath": "res/img/tab/wm-on.png"
+      }, {
+        "pagePath": "pages/my/my",
+        "iconPath": "res/img/tab/my-off.png",
+        "text": "我的",
+        "selectedIconPath": "res/img/tab/my-on.png"
+      }],
+      "color":"#174578",
+      "selectdColor":"#3cc51f",
+      "borderStyle":"white",
+      "backgroundColor":"#116fb6"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+
+  "debug": true
+}
