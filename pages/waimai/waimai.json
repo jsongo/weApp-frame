@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "外卖"
+    "navigationBarTitleText": "外卖",
+    "enablePullDownRefresh": false
 }
