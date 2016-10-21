@@ -5,7 +5,10 @@ Page({
         actionSheetHidden: true,
         // msg
         toastHidden: true,
-        toastMsg: 'message'
+        modalHidden: true,
+        toastMsg: 'message',
+        modalTitle: '',
+        modalContent: 'attention!'
     },
     onLoad: function () {
         console.log('onLoad');
@@ -40,5 +43,17 @@ Page({
                 toastHidden: true
             });
         }
+    },
+    showAbout: function() {
+        this.setData({
+            modalTitle: '关于',
+            modalContent: '这是一个演示程序，不要在意这些细节',
+            modalHidden: false
+        });
+    },
+    modalChange: function() {
+        this.setData({
+            modalHidden: !this.data.modalHidden
+        });
     }
 })

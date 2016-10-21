@@ -24,7 +24,7 @@ Page({
             }
         });
     },
-
+    
     onShow: function() {
         // 设置图片列表（的引用）
         var imgs = app.getPics(); // imgs是index页面里的data.items的引用 

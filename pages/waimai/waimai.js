@@ -12,7 +12,7 @@ Page({
       interval: 5000,
       duration: 1000,
 
-      chosenType: 1,
+      chosenType: 1, // 前面被选中的类型
       types: [{
               name: '热销',
               id: 1
@@ -48,12 +48,14 @@ Page({
               id: 11
       }]
   },
+
   onLoad: function () {
       console.log('onLoad');
       wx.setNavigationBarTitle({
           title:"探索页面"
       })
   },
+
   chooseType: function(event) {
       var id = event.currentTarget.dataset.id;
       // TODO: request the list of id...
@@ -61,8 +63,11 @@ Page({
           chosenType: id
       });
   },
+
   addToCart: function(event) {
       var id = event.currentTarget.dataset.id;
       console.log('add to cart: ' +  id);
+
+      // TODO: do something to add dishes to cart.
   }
 })

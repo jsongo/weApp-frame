@@ -94,7 +94,7 @@ Page({
         });
     },
     
-    packItem: function(item) {
+    packItem: function(item) { // 把返回的列表数据的每一项打包成本项目需要的格式
         var d = {
             id: item && item.pin_id || 0,
             img: item && item.file && ('http://img.hb.aicdn.com/' + item.file.key) || '',
@@ -122,14 +122,16 @@ Page({
         this.max = item && item.pin_id;
     },
 
+    // 顶部添加新项，拉取更新后的render
     prependList: function(data) {
         var firstId = this.data.items[0].id,
             list = data && data.pins;
         console.log(firstId);
         var extraData = [];
+        // 只追加新项
         for (var item of list) {
             var id = item && item.pin_id;
-            if (id && id === firstId) {
+            if (id && id === firstId) { // 遇到第一项就停止
                 break;
             }
             var d = this.packItem(item);
