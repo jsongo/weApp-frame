@@ -39,5 +39,5 @@
             </view>
         </scroll-view>
     </view>
-    
 </view>
+<include src="../toast/toast.wxml"/>

@@ -5,8 +5,8 @@ Page({
         actionSheetHidden: true,
         // msg
         toastHidden: true,
-        modalHidden: true,
         toastMsg: 'message',
+        modalHidden: true,
         modalTitle: '',
         modalContent: 'attention!'
     },

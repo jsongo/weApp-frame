@@ -7,7 +7,7 @@
             <swiper-item>
                 <view class="inner-wrapper">
                     <image src="{{item.img}}" class="slide-image"
-                    mode="aspectFill"></image>
+                    mode="aspectFit"></image>
                     <text class="desc">{{item.desc}}</text>
                 </view>
             </swiper-item>

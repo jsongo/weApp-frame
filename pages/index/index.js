@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
-var app = getApp()
+var app = getApp();
+var MAX_PREPEND = 3; // 用来控制下拉刷新时，最多加载的次数
 Page({
     data: {
         items: [],
@@ -9,15 +10,16 @@ Page({
     },
     curPage: 1,
     max: 0,
+    prependCnt: MAX_PREPEND,
+    cntPerPage: 20, // 每次加载多少个
 
     onLoad: function () {
         console.log('onLoad');
         this.fetchPage(this.curPage++);
 
-        var that = this;
         wx.getSystemInfo({
-            success: function( res ) {
-                that.setData({
+            success: ( res ) => { // 用这种方法调用，this指向Page
+                this.setData({
                     winH: res.windowHeight
                 });
             }
@@ -26,6 +28,7 @@ Page({
         // 把data.items的引用存到app里
         app.globalData.picList = this.data.items;
     },
+
     onShow: function() {
         wx.setNavigationBarTitle({
             title: "花瓣列表"
@@ -45,6 +48,7 @@ Page({
     onPullDownRefresh: function() {
         console.log('pulling down');
         var isPrepend = true; // 往前加
+        this.prependCnt --;
         this.fetchPage(1, isPrepend, this.prependList);
     },
 
@@ -54,7 +58,7 @@ Page({
             return;
         }
 
-        var url = 'http://huaban.com/favorite/photography/?limit=20&wfl=' + pageNo;
+        var url = 'http://huaban.com/favorite/photography/?limit=' + this.cntPerPage + '&wfl=' + pageNo;
         if (!isPrepend && this.max) {
             url +=  '&max=' + this.max;
         }
@@ -146,6 +150,14 @@ Page({
             this.setData({
                 items: items
             });
+        }
+
+        // 看还有没有更多
+        if (this.prependCnt >= 0 && extraData.length >= list.length) {
+            this.onPullDownRefresh(); // 再模拟一次调用
+        }
+        else {
+            this.prependCnt = MAX_PREPEND;
         }
     }
 })

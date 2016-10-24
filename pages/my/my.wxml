@@ -74,3 +74,4 @@
         {{modalContent}}
     </modal>
 </view>
+<include src="../toast/toast.wxml"/>
