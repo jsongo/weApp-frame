@@ -48,14 +48,37 @@ Page({
             }, {
                 name: '时令鲜蔬',
                 id: 11
-        }]
+        }],
+        dishes: []
     },
 
     onLoad: function () {
         console.log('onLoad');
         wx.setNavigationBarTitle({
             title:"探索页面"
-        })
+        });
+        var that = this;
+        this.reqData(1);
+    },
+
+    reqData: function(typeId) { // 模拟请求数据
+        // TODO: 请求分类typeId的餐品列表数据
+        // 模拟
+        var dishes = [];
+        for (var i = 0; i < 10; i ++) {
+            dishes.push({
+                id: typeId + '' + i,
+                name: '梅菜扣肉套餐+送酸奶',
+                img: '../../res/img/demo.jpg',
+                sold: 100,
+                price: 20,
+                likes: 100
+            });
+        }
+
+        this.setData({
+            dishes: dishes
+        });
     },
 
     chooseType: function(event) {
@@ -64,7 +87,10 @@ Page({
         this.setData({
             chosenType: id
         });
+
+        this.reqData(id);
     },
+
     toast: function(msg) {
         this.setData({
             toastHidden: false,

@@ -60,8 +60,8 @@
             <image src="../../res/img/my/arrow.png" class="arrow"></image>
         </view>
     </view>
-    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
-        <action-sheet-item class="item" bindtap="doLogout" data-name="确定注销">
+    <action-sheet hidden="{{actionSheetHidden}}">
+        <action-sheet-item class="item" bindtap="doLogout">
         确定注销
         </action-sheet-item>
         <action-sheet-cancel class="cancel">取消</action-sheet-cancel>

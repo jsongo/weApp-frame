@@ -26,16 +26,16 @@
             </view>
         </scroll-view>
         <scroll-view class="right-main scroll" scroll-y="true">
-            <view class="item" wx:for="{{[1,2,3,4,5,6,7,8,9]}}"
+            <view class="item" wx:for="{{dishes}}"
                 wx:for-item="item">
-                <image src="../../res/img/demo.jpg" class="dish-img"></image>
+                <image src="{{item.img}}" class="dish-img"></image>
                 <view class="info">
-                    <text class="desc">梅菜扣肉套餐+送酸奶</text>
-                    <text class="tips">月售100 赞10</text>
-                    <text class="price">￥24</text>
+                    <text class="desc">{{item.name}}</text>
+                    <text class="tips">月售{{item.sold}} 赞{{item.likes}}</text>
+                    <text class="price">￥{{item.price}}</text>
                 </view>
                 <image class="add-to-cart" src="../../res/img/add.png"
-                    bindtap="addToCart" data-id="{{item}}"></image>
+                    bindtap="addToCart" data-id="{{item.id}}"></image>
             </view>
         </scroll-view>
     </view>
