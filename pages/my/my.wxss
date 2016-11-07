@@ -1,4 +1,3 @@
-@import "../../wxss/base";
 
 page {
     background: #eee;
@@ -72,7 +71,6 @@ page {
     border-bottom: 1px #eee solid;
     background: #fff;
     padding: 16rpx;
-
 }
 .menu .item .icon {
     width: 56rpx;

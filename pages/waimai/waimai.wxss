@@ -1,4 +1,3 @@
-@import "../../wxss/base";
 
 page {
     background-color: #fff;

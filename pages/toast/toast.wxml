@@ -1,3 +1,0 @@
-<toast hidden="{{toastHidden}}" duration="3000" bindchange="toastChange">
-{{toastMsg}}
-</toast>

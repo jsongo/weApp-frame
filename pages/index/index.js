@@ -5,11 +5,11 @@ var MAX_PREPEND = 3; // 用来控制下拉刷新时，最多加载的次数
 Page({
     data: {
         items: [],
-        loading: false,
         winH: 0
     },
     curPage: 1,
     max: 0,
+    loading: false,
     prependCnt: MAX_PREPEND,
     cntPerPage: 20, // 每次加载多少个
 
@@ -53,7 +53,7 @@ Page({
     },
 
     fetchPage: function(pageNo, isPrepend, callback) {
-        if (this.data.loading) {
+        if (this.loading) {
             console.log('Prevented for the other request is processing...');
             return;
         }
@@ -64,8 +64,11 @@ Page({
         }
 
         var that = this;
-        that.setData({
-            loading: true
+        this.loading = true;
+        wx.showToast({
+            title: '加载中...',
+            icon: 'loading',
+            duration: 10000
         });
         // 显示标题栏的加载图标
         wx.showNavigationBarLoading();
@@ -86,9 +89,8 @@ Page({
             },
             // complete方法
             complete: function() {
-                that.setData({
-                    loading: false
-                });
+                this.loading = false
+                wx.hideToast();
                 // 隐藏标题栏的加载图标
                 wx.hideNavigationBarLoading();
                 

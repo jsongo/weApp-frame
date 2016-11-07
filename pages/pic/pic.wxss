@@ -1,4 +1,4 @@
-@import "../../wxss/base";
+@import "../../wxss/base.wxss";
 
 .container {
     position: relative;

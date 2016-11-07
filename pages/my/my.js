@@ -2,13 +2,6 @@
 var app = getApp()
 Page({
     data: {
-        actionSheetHidden: true,
-        // msg
-        toastHidden: true,
-        toastMsg: 'message',
-        modalHidden: true,
-        modalTitle: '',
-        modalContent: 'attention!'
     },
     onLoad: function () {
         console.log('onLoad');
@@ -16,44 +9,38 @@ Page({
             title:"个人中心"
         });
     },
-    logout: function() {
-        this.setData({
-            actionSheetHidden: false
-        });
-    },
     doLogout: function() {
         // TODO: do some logout action here
-        this.actionSheetChange();
-        this.toast('注销成功！');
-    },
-    actionSheetChange: function() {
-        this.setData({
-            actionSheetHidden: !this.data.actionSheetHidden
+        wx.showToast({
+            title: '注销成功！',
+            icon: 'success',
+            duration: 3000,
+            success: function(res) {
+                if (res.confirm === 1) {
+                    console.log('用户点击了确认按钮');
+                }
+                else {
+                    console.log('用户点击了取消按钮');
+                }
+            }
         });
     },
-    toast: function(msg) {
-        this.setData({
-            toastHidden: false,
-            toastMsg: msg
+    logout: function() {
+        wx.showActionSheet({
+            itemList: ['确定注销'],
+            success: (res)=> {
+                if (!res.cancel) {
+                    if (res.tapIndex == 0) { // 确定注销
+                        this.doLogout();
+                    }
+                }
+            }
         });
-    },
-    toastChange: function(event) {
-        if (event.detail.value === false) {
-            this.setData({
-                toastHidden: true
-            });
-        }
     },
     showAbout: function() {
-        this.setData({
-            modalTitle: '关于',
-            modalContent: '这是一个演示程序，不要在意这些细节',
-            modalHidden: false
-        });
-    },
-    modalChange: function() {
-        this.setData({
-            modalHidden: !this.data.modalHidden
+        wx.showModal({
+            title: '关于',
+            content: '这是一个演示程序，不要在意这些细节'
         });
     }
 })

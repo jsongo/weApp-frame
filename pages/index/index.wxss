@@ -1,5 +1,4 @@
-/**index.wxss**/
-@import "../../wxss/base";
+@import "../../wxss/base.wxss";
 
 page {
     background-color: cornsilk;

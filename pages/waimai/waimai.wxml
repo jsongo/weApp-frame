@@ -3,7 +3,7 @@
 
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" 
         duration="{{duration}}" class="banner">
-        <block wx:for="{{imgUrls}}">
+        <block wx:for="{{imgUrls}}" wx:key="*this">
             <swiper-item>
                 <image src="{{item}}" width="100%"></image>
             </swiper-item>
@@ -18,7 +18,7 @@
     <view class="main-section">
         <scroll-view class="left-menu scroll" scroll-y="true">
             <view class="list">
-                <view class="item {{item.id==chosenType?'selected':''}}" 
+                <view class="item {{item.id==chosenType?'selected':''}}" wx:key="id"
                     wx:for="{{types}}" wx:for-item="item" data-id="{{item.id}}"
                     bindtap="chooseType">
                     <text class="sub-title">{{item.name}}</text>
@@ -26,7 +26,7 @@
             </view>
         </scroll-view>
         <scroll-view class="right-main scroll" scroll-y="true">
-            <view class="item" wx:for="{{dishes}}"
+            <view class="item" wx:for="{{dishes}}" wx:key="id"
                 wx:for-item="item">
                 <image src="{{item.img}}" class="dish-img"></image>
                 <view class="info">
@@ -40,4 +40,3 @@
         </scroll-view>
     </view>
 </view>
-<include src="../toast/toast.wxml"/>

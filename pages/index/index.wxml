@@ -3,7 +3,7 @@
     <scroll-view scroll-y="true" bindscrolltolower="loadMore" 
         lower-threshold="10" class="scroll-wrapper" 
         style="height: {{winH}}px;">
-        <navigator url="../pic/pic?index={{index}}" 
+        <navigator url="../pic/pic?index={{index}}" wx:key="id"
             hover-class="navigator-hover" wx:for="{{items}}" >
             <view class="scroll-view-item">
                 <image src="{{item.img}}_/fw/480"></image>
@@ -13,7 +13,4 @@
             </view>
         </navigator>
     </scroll-view>
-	<loading hidden="{{!loading}}">
-        加载中...
-	</loading>
 </view>
